@@ -1,0 +1,104 @@
+@use 'colors' as color;
+@use 'breakpoints' as media;
+
+.bg {
+  &-accent {
+    background: color.$brand-accent !important;
+
+    &-dark {
+      &-100 {
+        background: color.$brand-accent-dark-100 !important;
+      }
+
+      &-200 {
+        background: color.$brand-accent-dark-200 !important;
+      }
+    }
+  }
+
+  &-white {
+    background: color.$brand-white !important;
+  }
+
+  &-black {
+    background: color.$brand-black !important;
+  }
+}
+
+@include media.breakpoint-up(md) {
+  .bg-md {
+    &-accent {
+      background: color.$brand-accent !important;
+
+      &-dark {
+        &-100 {
+          background: color.$brand-accent-dark-100 !important;
+        }
+
+        &-200 {
+          background: color.$brand-accent-dark-200 !important;
+        }
+      }
+    }
+
+    &-white {
+      background: color.$brand-white !important;
+    }
+
+    &-black {
+      background: color.$brand-black !important;
+    }
+  }
+}
+
+@include media.breakpoint-up(lg) {
+  .bg-lg {
+    &-accent {
+      background: color.$brand-accent !important;
+
+      &-dark {
+        &-100 {
+          background: color.$brand-accent-dark-100 !important;
+        }
+
+        &-200 {
+          background: color.$brand-accent-dark-200 !important;
+        }
+      }
+    }
+
+    &-white {
+      background: color.$brand-white !important;
+    }
+
+    &-black {
+      background: color.$brand-black !important;
+    }
+  }
+}
+
+@include media.breakpoint-up(xl) {
+  .bg-xl {
+    &-accent {
+      background: color.$brand-accent !important;
+
+      &-dark {
+        &-100 {
+          background: color.$brand-accent-dark-100 !important;
+        }
+
+        &-200 {
+          background: color.$brand-accent-dark-200 !important;
+        }
+      }
+    }
+
+    &-white {
+      background: color.$brand-white !important;
+    }
+
+    &-black {
+      background: color.$brand-black !important;
+    }
+  }
+}

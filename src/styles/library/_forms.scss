@@ -1,0 +1,19 @@
+@use 'utilities' as util;
+@use 'colors' as color;
+
+.form {
+  &-control {
+    width: 100%;
+    height: util.toRem(66);
+    border-radius: util.toRem(51);
+    background: color.$brand-accent-dark-100;
+
+    padding: util.toRem(18) util.toRem(20);
+
+    font-weight: 400;
+    font-size: util.toRem(20);
+    line-height: util.toRem(25);
+    color: color.$brand-accent;
+    letter-spacing: util.toRem(-0.16);
+  }
+}

@@ -1,0 +1,104 @@
+@use 'colors' as color;
+@use 'breakpoints' as media;
+
+.text {
+  &-accent {
+    color: color.$brand-accent !important;
+
+    &-dark {
+      &-100 {
+        color: color.$brand-accent-dark-100 !important;
+      }
+
+      &-200 {
+        color: color.$brand-accent-dark-200 !important;
+      }
+    }
+  }
+
+  &-white {
+    color: color.$brand-white !important;
+  }
+
+  &-black {
+    color: color.$brand-black !important;
+  }
+}
+
+@include media.breakpoint-up(md) {
+  .text-md {
+    &-accent {
+      color: color.$brand-accent !important;
+
+      &-dark {
+        &-100 {
+          color: color.$brand-accent-dark-100 !important;
+        }
+
+        &-200 {
+          color: color.$brand-accent-dark-200 !important;
+        }
+      }
+    }
+
+    &-white {
+      color: color.$brand-white !important;
+    }
+
+    &-black {
+      color: color.$brand-black !important;
+    }
+  }
+}
+
+@include media.breakpoint-up(lg) {
+  .text-lg {
+    &-accent {
+      color: color.$brand-accent !important;
+
+      &-dark {
+        &-100 {
+          color: color.$brand-accent-dark-100 !important;
+        }
+
+        &-200 {
+          color: color.$brand-accent-dark-200 !important;
+        }
+      }
+    }
+
+    &-white {
+      color: color.$brand-white !important;
+    }
+
+    &-black {
+      color: color.$brand-black !important;
+    }
+  }
+}
+
+@include media.breakpoint-up(xl) {
+  .text-xl {
+    &-accent {
+      color: color.$brand-accent !important;
+
+      &-dark {
+        &-100 {
+          color: color.$brand-accent-dark-100 !important;
+        }
+
+        &-200 {
+          color: color.$brand-accent-dark-200 !important;
+        }
+      }
+    }
+
+    &-white {
+      color: color.$brand-white !important;
+    }
+
+    &-black {
+      color: color.$brand-black !important;
+    }
+  }
+}
