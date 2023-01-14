@@ -3,7 +3,7 @@
 
 .homepage {
   &__hero-bg {
-    @include base.flex-start-center();
+    @include base.flex-center-start();
 
     width: 100%;
     height: base.toRem(600);

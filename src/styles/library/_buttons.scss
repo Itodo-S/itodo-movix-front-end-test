@@ -18,5 +18,31 @@
 }
 
 .btn:hover {
-    background-color: color.$brand-gray-900 !important;
-  }
+  background-color: color.$brand-gray-900 !important;
+}
+
+.btn-watch{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: util.toRem(14);
+  line-height: util.toRem(24);
+  letter-spacing: util.toRem(0.46);
+
+  width: util.toRem(169);
+  height: util.toRem(36);
+  border-radius: util.toRem(10);
+
+  background: color.$brand-accent;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-watch:hover { 
+  width: util.toRem(171);
+  height: util.toRem(38);
+}
