@@ -16,6 +16,10 @@
     }
   }
 
+  &-rose{
+    color: color.$brand-accent !important;
+  }
+
   &-white {
     color: color.$brand-white !important;
   }

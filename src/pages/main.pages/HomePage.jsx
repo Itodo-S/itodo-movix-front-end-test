@@ -1,10 +1,12 @@
 import React from "react";
 import { assets } from "../../assets";
+import { ExclusiveVideoCard, PictureCard } from "../../components/Cards";
+import { MovieCategories } from "../../components/MovieCategories";
 import Nav from "../../components/Navigation/Nav";
 
 const HomePage = () => {
   return (
-    <div className="homepage">
+    <div className="homepage d-flex flex-direction-col justify-content-center align-items-center">
       <div
         className="homepage__hero-bg flex-direction-col"
         style={{ backgroundImage: `url(${assets.Poster})` }}
@@ -61,6 +63,33 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
+      <MovieCategories>
+        <PictureCard />
+        <PictureCard />
+        <PictureCard />
+        <PictureCard />
+      </MovieCategories>
+
+      <MovieCategories>
+        <PictureCard />
+        <PictureCard />
+        <PictureCard />
+        <PictureCard />
+      </MovieCategories>
+
+      <MovieCategories>
+        <ExclusiveVideoCard />
+        <ExclusiveVideoCard />
+        <ExclusiveVideoCard />
+      </MovieCategories>
+
+      <MovieCategories>
+        <PictureCard />
+        <PictureCard />
+        <PictureCard />
+        <PictureCard />
+      </MovieCategories>
     </div>
   );
 };
