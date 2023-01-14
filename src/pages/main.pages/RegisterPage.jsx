@@ -7,12 +7,12 @@ const RegisterPage = () => {
   return (
     <div className="register-page wf-100 hv-100">
       <div className="register-page__form-container">
-        <img src={assets.Logo} alt="Band Logo" className="mgb-10"/>
+        <img src={assets.Logo} alt="Band Logo" className="mgb-10" />
         <p className="text-black fw-bold register-page__form-container__title mgt-20">
           Hi, Welcome
         </p>
         <p className="register-page__form-container__sub-title text-accent-dark-100 mgb-10">
-          Please sign-in to your account and start your experience
+          Please sign-up to start your experience
         </p>
 
         <form className="wf-100">
@@ -32,7 +32,7 @@ const RegisterPage = () => {
           </button>
         </form>
 
-        <Link className="register-page__link">
+        <Link to="/login" className="register-page__link">
           Already have an account? <span className="">Login</span>
         </Link>
       </div>
