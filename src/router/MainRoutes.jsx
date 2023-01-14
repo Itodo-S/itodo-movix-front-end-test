@@ -6,7 +6,7 @@ import { Route } from "react-router-dom";
 // LAYOUTS
 
 // PAGES
-import { LoginPage, RegisterPage } from "../pages/main.pages";
+import { HomePage, LoginPage, RegisterPage } from "../pages/main.pages";
 
 const MainRoutes = () => {
   return (
@@ -14,6 +14,7 @@ const MainRoutes = () => {
       <Route>
         <Route index element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/home" element={<HomePage />} />
       </Route>
     </Fragment>
   );

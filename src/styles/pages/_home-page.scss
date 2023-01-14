@@ -1,0 +1,13 @@
+@use "../library" as base;
+@use "../library/colors" as color;
+
+.homepage {
+  &__hero-bg {
+    @include base.flex-start-center();
+
+    width: 100%;
+    height: base.toRem(600);
+
+    background: color.$brand-accent;
+  }
+}

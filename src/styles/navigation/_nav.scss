@@ -1,0 +1,21 @@
+@use "../library" as base;
+@use "../library/colors" as color;
+
+.nav {
+  @include base.flex-center-between();
+
+  &__input {
+    border: 1px solid color.$brand-white;
+    border-radius: base.toRem(10);
+
+    input {
+      &::placeholder {
+        color: color.$brand-white;
+        font-weight: 400;
+        font-size: base.toRem(16);
+        line-height: base.toRem(25);
+        letter-spacing: base.toRem(-0.16);
+      }
+    }
+  }
+}
