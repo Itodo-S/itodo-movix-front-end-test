@@ -1,6 +1,7 @@
 import React from "react";
 import { assets } from "../../assets";
 import { ExclusiveVideoCard, PictureCard } from "../../components/Cards";
+import { Footer } from "../../components/Footer";
 import { MovieCategories } from "../../components/MovieCategories";
 import Nav from "../../components/Navigation/Nav";
 
@@ -90,6 +91,8 @@ const HomePage = () => {
         <PictureCard />
         <PictureCard />
       </MovieCategories>
+
+      <Footer />
     </div>
   );
 };

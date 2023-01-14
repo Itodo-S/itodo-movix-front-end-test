@@ -10,7 +10,7 @@ const PictureCard = () => {
         USA, 2016 - Current
       </p>
 
-      <p className="fw-bold fs-18 mgt-15">Stranger Things</p>
+      <p className="fw-bold fs-18 mgt-15 text-accent">Stranger Things</p>
 
       <div className="d-flex justify-content-between align-items-center mgt-10">
         <div className="d-flex align-items-center">
