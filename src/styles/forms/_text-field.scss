@@ -1,0 +1,16 @@
+@use "../library" as base;
+@use "../library/colors" as color;
+
+.text-field{
+  @include base.flex-center();
+
+  height: base.toRem(50);
+  width: 100% !important;
+
+  border: 1px solid  rgba(76, 78, 100, 0.38);
+  border-radius: base.toRem(10);
+
+  padding-left: base.toRem(8);
+  padding-right: base.toRem(8);
+  margin-top: base.toRem(15);
+}

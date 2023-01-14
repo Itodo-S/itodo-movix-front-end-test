@@ -1,0 +1,46 @@
+@use "../library" as base;
+@use "../library/colors" as color;
+
+.register-page {
+  @include base.flex-center();
+
+  &__form-container {
+    width: 450px;
+    height: 604px;
+
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+
+    padding: 48px 28px 36px;
+
+    @include base.flex-center();
+    flex-direction: column;
+
+    &__title {
+      font-size: base.toRem(18);
+    }
+
+    &__sub-title {
+      font-size: base.toRem(13);
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: base.toRem(14);
+
+    color: color.$brand-grey-100;
+
+    margin-top: base.toRem(30);
+
+    transition: all 0.5s ease-in-out;
+
+    span {
+      color: color.$brand-accent;
+    }
+  }
+
+  &__link:hover {
+    font-size: base.toRem(14.4);
+  }
+}

@@ -1,6 +1,6 @@
-@use 'utilities' as util;
-@use 'colors' as color;
-@use 'mixins' as mixin;
+@use '../library/utilities' as util;
+@use '../library/colors' as color;
+@use '../library/mixins' as mixin;
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700;800&display=swap');
 
 *,
@@ -57,7 +57,7 @@ a {
 }
 
 input {
-  border: 1px solid rgba(76, 78, 100, 0.38);
+  border: none;
   outline: none;
 
   &:hover {
@@ -70,8 +70,8 @@ input {
 
   &::placeholder {
     color: rgba(76, 78, 100, 0.38);
-    font-weight: 400;
-    font-size: util.toRem(20);
+    font-weight: 500;
+    font-size: util.toRem(16);
     line-height: util.toRem(25);
     letter-spacing: util.toRem(-0.16);
   }

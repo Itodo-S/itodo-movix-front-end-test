@@ -1,117 +1,22 @@
-@use 'colors' as color;
-@use 'utilities' as util;
+@use "../library/colors" as color;
+@use "../library/utilities" as util;
 
 .btn {
   display: inline-block;
   position: relative;
 
-  font-weight: 600;
-  font-size: util.toRem(17);
-  line-height: util.toRem(30);
-  letter-spacing: util.toRem(-0.16);
+  font-weight: 500;
+  font-size: util.toRem(15);
+  line-height: util.toRem(26);
+  letter-spacing: util.toRem(0.46);
 
   width: util.toRem(140);
   height: util.toRem(55);
+  border-radius: util.toRem(10);
 
   transition: all 0.3s ease-in-out;
-
-  &__body {
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    top: 0;
-    z-index: 2;
-
-    display: grid;
-    place-items: center;
-
-    border-top-right-radius: util.toRem(30);
-    border-bottom-left-radius: util.toRem(30);
-  }
-
-  &--panel {
-    width: 100%;
-    height: 100%;
-
-    background-color: color.$brand-white;
-
-    position: absolute;
-    top: util.toRem(4);
-    right: util.toRem(-10);
-    z-index: 1;
-
-    border-top-right-radius: util.toRem(30);
-    border-bottom-left-radius: util.toRem(30);
-  }
-
-  &--accent {
-    .btn__body {
-      color: color.$brand-white;
-      background-color: color.$brand-accent;
-    }
-
-    &:hover,
-    &:focus {
-      .btn__body {
-        background-color: darken($color: color.$brand-accent, $amount: 8%);
-      }
-    }
-
-    .btn--panel {
-      background-color: color.$brand-white;
-    }
-  }
-
-  &--accent-inverse {
-    .btn__body {
-      color: color.$brand-black;
-      background-color: color.$brand-white;
-    }
-
-    .btn--panel {
-      background-color: color.$brand-accent;
-    }
-
-    &:hover,
-    &:focus {
-      .btn--panel {
-        background-color: darken($color: color.$brand-accent, $amount: 8%);
-      }
-    }
-  }
-
-  &-link {
-    color: color.$brand-white;
-    display: inline-block;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: util.toRem(16);
-    line-height: util.toRem(30);
-    letter-spacing: util.toRem(-0.16);
-    transition: all 0.3s ease-in-out;
-
-    * {
-      transition: all 0.3s ease-in-out;
-    }
-
-    &--inactive {
-      color: color.$brand-white;
-    }
-
-    &--active {
-      color: color.$brand-accent;
-    }
-
-    *:hover {
-      color: color.$brand-accent;
-    }
-
-    &:hover,
-    &:focus,
-    &:active,
-    &:visited {
-      color: color.$brand-accent;
-    }
-  }
 }
+
+.btn:hover {
+    background-color: color.$brand-gray-900 !important;
+  }

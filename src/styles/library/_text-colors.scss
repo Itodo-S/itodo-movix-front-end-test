@@ -1,17 +1,17 @@
-@use 'colors' as color;
-@use 'breakpoints' as media;
+@use '../library/colors' as color;
+@use '../library/breakpoints' as media;
 
 .text {
   &-accent {
-    color: color.$brand-accent !important;
+    color: color.$brand-gray-900!important;
 
     &-dark {
       &-100 {
-        color: color.$brand-accent-dark-100 !important;
+        color: color.$brand-grey-100 !important;
       }
 
       &-200 {
-        color: color.$brand-accent-dark-200 !important;
+        color: color.$brand-gray-400 !important;
       }
     }
   }

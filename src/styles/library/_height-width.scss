@@ -16,8 +16,16 @@ $size: 200;
     width: #{$n + '%'} !important;
   }
 
+  .wv-#{$n} {
+    width: #{$n + 'vh'} !important;
+  }
+
   .hf-#{$n} {
     height: #{$n + '%'} !important;
+  }
+
+  .hv-#{$n} {
+    height: #{$n + 'vh'} !important;
   }
 }
 
