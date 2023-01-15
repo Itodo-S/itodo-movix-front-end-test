@@ -1,8 +1,13 @@
 import React from "react";
 import { assets } from "../../assets";
-import { ExclusiveVideoCard, PictureCard } from "../../components/Cards";
+import { ExclusiveVideoCard } from "../../components/Cards";
+import {
+  FeaturedCast,
+  FeaturedMovies,
+  NewArrival,
+} from "../../components/DisplayMovies";
 import { Footer } from "../../components/Footer";
-import { MovieCategories } from "../../components/MovieCategories";
+import { ExclusiveVideosCat } from "../../components/MovieCategories";
 import Nav from "../../components/Navigation/Nav";
 
 const HomePage = () => {
@@ -65,33 +70,35 @@ const HomePage = () => {
         </div>
       </div>
 
-      <MovieCategories>
-        <PictureCard />
-        <PictureCard />
-        <PictureCard />
-        <PictureCard />
-      </MovieCategories>
+      {/* DISPLAYS FEATURED MOVIES */}
+      <FeaturedMovies />
 
-      <MovieCategories>
-        <PictureCard />
-        <PictureCard />
-        <PictureCard />
-        <PictureCard />
-      </MovieCategories>
+      {/* DISPLAYS  NEW MOVIES */}
+      <NewArrival />
 
-      <MovieCategories>
+      {/* <MovieCategories>
         <ExclusiveVideoCard />
         <ExclusiveVideoCard />
         <ExclusiveVideoCard />
-      </MovieCategories>
+      </MovieCategories> */}
 
-      <MovieCategories>
-        <PictureCard />
-        <PictureCard />
-        <PictureCard />
-        <PictureCard />
-      </MovieCategories>
+      {/* DISPLAYS  EXCLUSIVE VIDEO */}
+      <ExclusiveVideosCat title="Exclusive Videos" option="See more">
+        <ExclusiveVideoCard src={assets.lamb} title="Lamb (2021) Trailer" />
+        <ExclusiveVideoCard
+          src={assets.squad}
+          title="The Suicide Squad : John Cena Interview"
+        />
+        <ExclusiveVideoCard
+          src={assets.will}
+          title="Will there be a new era of horror movie?"
+        />
+      </ExclusiveVideosCat>
 
+      {/* DISPLAYS  FEATURED CASTS */}
+      <FeaturedCast />
+
+      {/* DISPLAYS FOOTER */}
       <Footer />
     </div>
   );

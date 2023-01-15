@@ -1,7 +1,16 @@
 .exclusive-video-card {
-    
-    &__picture {
-      height: 253px;
-    }
+  &__picture {
+    height: 253px;
+    position: relative;
   }
-  
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+

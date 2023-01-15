@@ -1,20 +1,13 @@
 import React from "react";
-import Masonry from "react-masonry-css";
 import { assets } from "../../assets";
 
-const MovieCategories = ({
+const ExclusiveVideosCat = ({
   children,
   title,
   option,
   handleNext,
   handlePrev,
 }) => {
-  const breakpointColumnsObj = {
-    default: 4,
-    1100: 3,
-    700: 2,
-    500: 1,
-  };
 
   return (
     <div className="wf-98 d-flex flex-direction-col align-items-center mgt-50">
@@ -37,15 +30,7 @@ const MovieCategories = ({
           className="mgr-20 pointer"
           onClick={handlePrev}
         />
-        <div className="wf-90">
-          <Masonry
-            breakpointCols={breakpointColumnsObj}
-            className="my-masonry-grid"
-            columnClassName="my-masonry-grid_column"
-          >
-            {children}
-          </Masonry>
-        </div>
+        <div className="wf-90 movie-scroller">{children}</div>
         <img
           src={assets.right_arrow}
           alt=""
@@ -57,4 +42,4 @@ const MovieCategories = ({
   );
 };
 
-export { MovieCategories as default };
+export { ExclusiveVideosCat as default };

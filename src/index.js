@@ -5,6 +5,10 @@ import { store } from "./store/store";
 import reportWebVitals from "./reportWebVitals";
 import "./index.scss";
 
+// TOAST ALERT
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // APP
 import App from "./app/App";
 
@@ -19,6 +23,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
+      <ToastContainer />
     </Provider>
   </React.StrictMode>
 );

@@ -1,6 +1,15 @@
 .picture-card {
-    
   &__picture {
     height: 370px;
+    position: relative;
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
   }
 }
