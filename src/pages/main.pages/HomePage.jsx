@@ -76,12 +76,6 @@ const HomePage = () => {
       {/* DISPLAYS  NEW MOVIES */}
       <NewArrival />
 
-      {/* <MovieCategories>
-        <ExclusiveVideoCard />
-        <ExclusiveVideoCard />
-        <ExclusiveVideoCard />
-      </MovieCategories> */}
-
       {/* DISPLAYS  EXCLUSIVE VIDEO */}
       <ExclusiveVideosCat title="Exclusive Videos" option="See more">
         <ExclusiveVideoCard src={assets.lamb} title="Lamb (2021) Trailer" />

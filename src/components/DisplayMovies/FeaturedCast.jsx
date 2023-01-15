@@ -10,6 +10,7 @@ const FeaturedCast = () => {
   const { featuredCasts } = useSelector((state) => state.featuredCasts);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // HANDLES THE SCROLL FUNCTIONALITY ON THE MOVIES BUTTONS
   const handleScroll = (direction) => {
     if (direction === "left") {
       setCurrentIndex(currentIndex - 1);
@@ -18,10 +19,12 @@ const FeaturedCast = () => {
     }
   };
 
+  // DISABLES THE SCROLL BUTTONS ON THEIR LIMITS
   const isLeftArrowDisabled = currentIndex === 0;
   const isRightArrowDisabled =
     currentIndex + 4 >= featuredCasts?.results?.length;
 
+  // DISPATCHES MY STATE
   useEffect(() => {
     dispatch(getFeaturedCast());
   }, [dispatch]);

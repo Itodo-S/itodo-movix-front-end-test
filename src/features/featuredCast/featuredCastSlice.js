@@ -9,7 +9,7 @@ const initialState = {
   message: "",
 };
 
-// GET STORE PRODUCTS
+// GET FEATURED CAST
 export const getFeaturedCast = createAsyncThunk(
   "featuredcast/getAll",
   async (_, thunkAPI) => {

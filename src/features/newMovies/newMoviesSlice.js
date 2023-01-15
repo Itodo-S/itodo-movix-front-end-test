@@ -9,7 +9,7 @@ const initialState = {
   message: "",
 };
 
-// GET STORE PRODUCTS
+// GET NEW MOVIES
 export const getNewMovies = createAsyncThunk(
   "new/getAll",
   async (_, thunkAPI) => {

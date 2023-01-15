@@ -8,9 +8,9 @@ import { MovieCategories } from "../MovieCategories";
 const FeaturedMovies = () => {
   const dispatch = useDispatch();
   const { popularMovies } = useSelector((state) => state.popularMovies);
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // HANDLES THE SCROLL FUNCTIONALITY ON THE MOVIES BUTTONS
   const handleScroll = (direction) => {
     if (direction === "left") {
       setCurrentIndex(currentIndex - 1);
@@ -19,10 +19,12 @@ const FeaturedMovies = () => {
     }
   };
 
+  // DISABLES THE SCROLL BUTTONS ON THEIR LIMITS
   const isLeftArrowDisabled = () => currentIndex === 0;
   const isRightArrowDisabled =
     currentIndex + 4 >= popularMovies?.results?.length;
 
+  // DISPATCHES MY STATE
   useEffect(() => {
     dispatch(getPopularMovies());
   }, [dispatch]);
@@ -31,8 +33,16 @@ const FeaturedMovies = () => {
       <MovieCategories
         title="Featured Movie"
         option="See more"
-        handlePrev={() => (isLeftArrowDisabled ? toast.warn('You have reached the limit') : handleScroll("left"))}
-        handleNext={() => (isRightArrowDisabled ? toast.warn('You have reached the limit')  : handleScroll("right"))}
+        handlePrev={() =>
+          isLeftArrowDisabled
+            ? toast.warn("You have reached the limit")
+            : handleScroll("left")
+        }
+        handleNext={() =>
+          isRightArrowDisabled
+            ? toast.warn("You have reached the limit")
+            : handleScroll("right")
+        }
       >
         {popularMovies?.results
           ?.slice(currentIndex, currentIndex + 4)
