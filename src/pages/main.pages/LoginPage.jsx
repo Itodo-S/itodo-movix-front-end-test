@@ -10,6 +10,7 @@ import { login, reset } from "../../features/auth/authSlice";
 const LoginPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -20,6 +21,9 @@ const LoginPage = () => {
   );
 
   const { email, password } = formData;
+
+  // HANDLES SHOWING AND HIDING OF PASSWORD
+  const handleShowPassword = () => setShowPassword(!showPassword);
 
   // WATCHES FOR CHANGES IN THE INPUT FIELDS
   const onChange = (e) => {
@@ -49,7 +53,7 @@ const LoginPage = () => {
 
     if (isSuccess || user) {
       navigate("/home");
-      toast.success("Login successful")
+      toast.success("Login successful");
     }
 
     dispatch(reset());
@@ -79,12 +83,13 @@ const LoginPage = () => {
             onChange={onChange}
           />
           <TextField
-            type="password"
             placeholder="Passwoard"
-            src={assets.eye_close}
+            type={showPassword ? "text" : "password"}
+            src={!showPassword ? assets.eye_close : assets.eye_open}
             name="password"
             value={password}
             onChange={onChange}
+            handleShowPassword={handleShowPassword}
           />
 
           <button

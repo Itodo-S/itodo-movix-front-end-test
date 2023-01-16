@@ -1,6 +1,6 @@
 import React from "react";
 
-const TextField = ({ type, placeholder, value, onChange, src, alt, name }) => {
+const TextField = ({ type, placeholder, value, onChange, src, alt, name, handleShowPassword }) => {
   return (
     <div>
       <div className="text-field">
@@ -12,7 +12,7 @@ const TextField = ({ type, placeholder, value, onChange, src, alt, name }) => {
           name={name}
           className="wf-100"
         />
-        <img src={src} alt={alt} />
+        <img src={src} alt={alt} onClick={handleShowPassword} />
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ import { register, reset } from "../../features/auth/authSlice";
 const RegisterPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [showPassword, setShowPassword] = useState(false);
 
   const { user, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.auth
@@ -22,6 +23,9 @@ const RegisterPage = () => {
   });
 
   const { name, email, password } = formData;
+
+  // HANDLES SHOWING AND HIDING OF PASSWORD
+  const handleShowPassword = () => setShowPassword(!showPassword);
 
   // WATCHES FOR CHANGES IN THE INPUT FIELDS
   const onChange = (e) => {
@@ -88,12 +92,13 @@ const RegisterPage = () => {
             onChange={onChange}
           />
           <TextField
-            type="password"
             placeholder="Passwoard"
-            src={assets.eye_close}
             name="password"
+            type={showPassword ? "text" : "password"}
+            src={!showPassword ? assets.eye_close : assets.eye_open}
             value={password}
             onChange={onChange}
+            handleShowPassword={handleShowPassword}
           />
 
           <button

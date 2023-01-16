@@ -1,5 +1,6 @@
 import Logo from "./Logo.png";
 import eye_close from "./Icons/eye_close.png";
+import eye_open from "./Icons/eye_open.png";
 import tv from "./Icons/tv.png";
 import SearchIcon from "./Icons/SearchIcon.png";
 import Menu from "./Icons/Menu.png";
@@ -24,6 +25,7 @@ import will from "./will.png";
 export const assets = {
   Logo,
   eye_close,
+  eye_open,
   tv,
   Poster,
   SearchIcon,
