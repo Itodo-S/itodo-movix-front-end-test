@@ -2,6 +2,8 @@ import React from "react";
 import { assets } from "../../assets";
 
 const Nav = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+
   return (
     <div className="nav wf-90 pdy-20">
       <div className="d-flex flex-direction-row justify-content-center align-items-center">
@@ -26,8 +28,8 @@ const Nav = () => {
 
       <div className="d-flex flex-direction-row justify-content-center align-items-center">
         {" "}
-        <p className="fs-16 text-white fw-bold">Hi, $Fullname</p>
-        <img src={assets.Menu} alt="Movix Tv Logo" className="mgl-15"/>
+        <p className="fs-16 text-white fw-bold">Hi, {user.name}</p>
+        <img src={assets.Menu} alt="Movix Tv Logo" className="mgl-15" />
       </div>
     </div>
   );

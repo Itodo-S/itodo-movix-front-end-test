@@ -79,7 +79,7 @@ const RegisterPage = () => {
         <form className="wf-100" onSubmit={onSubmit}>
           <TextField
             type="text"
-            placeholder="First Name"
+            placeholder="Full Name"
             onChange={onChange}
             name="name"
             value={name}

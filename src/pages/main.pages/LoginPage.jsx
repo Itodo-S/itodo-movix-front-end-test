@@ -20,6 +20,7 @@ const LoginPage = () => {
     (state) => state.auth
   );
 
+
   const { email, password } = formData;
 
   // HANDLES SHOWING AND HIDING OF PASSWORD
