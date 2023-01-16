@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { assets } from "../../assets";
 import { ExclusiveVideoCard } from "../../components/Cards";
 import {
@@ -11,6 +12,14 @@ import { ExclusiveVideosCat } from "../../components/MovieCategories";
 import Nav from "../../components/Navigation/Nav";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
   return (
     <div className="homepage d-flex flex-direction-col justify-content-center align-items-center">
       <div

@@ -12,7 +12,7 @@ const Nav = () => {
       <div className="wf-40">
         <div className="nav__input wf-100 d-flex align-items-center h-40 pdx-10">
           <input
-            className="wf-100 hf-100"
+            className="wf-100 hf-100 text-white"
             type="text"
             placeholder="What do you want to watch?"
           />

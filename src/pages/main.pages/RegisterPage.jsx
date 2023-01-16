@@ -1,9 +1,66 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { assets } from "../../assets";
 import { TextField } from "../../components/Forms";
+import Spinner from "../../components/Spinner";
+import { register, reset } from "../../features/auth/authSlice";
 
 const RegisterPage = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth
+  );
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const { name, email, password } = formData;
+
+  // WATCHES FOR CHANGES IN THE INPUT FIELDS
+  const onChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  // HANDLES THE FORM SUBMITING
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    const userData = {
+      name,
+      email,
+      password,
+    };
+
+    dispatch(register(userData));
+  };
+
+  // DISPATCHES THE STATE
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+
+    if (isSuccess || user) {
+      navigate("/home");
+    }
+
+    dispatch(reset());
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
+
+  // LOADER
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <div className="register-page wf-100 hv-100">
       <div className="register-page__form-container">
@@ -15,13 +72,28 @@ const RegisterPage = () => {
           Please sign-up to start your experience
         </p>
 
-        <form className="wf-100">
-          <TextField type="text" placeholder="First Name" />
-          <TextField type="text" placeholder="Email" />
+        <form className="wf-100" onSubmit={onSubmit}>
           <TextField
             type="text"
+            placeholder="First Name"
+            onChange={onChange}
+            name="name"
+            value={name}
+          />
+          <TextField
+            type="email"
+            placeholder="Email"
+            name="email"
+            value={email}
+            onChange={onChange}
+          />
+          <TextField
+            type="password"
             placeholder="Passwoard"
             src={assets.eye_close}
+            name="password"
+            value={password}
+            onChange={onChange}
           />
 
           <button
